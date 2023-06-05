@@ -1,5 +1,9 @@
 import random
 
+'''
+Функции для блока main.py
+'''
+
 
 def get_random_person():  # Не чистая функция (случайная величина)
     '''
@@ -30,7 +34,7 @@ def get_question(answer, data):  # Не чистая функция (вывод 
 
 
 def get_file_info():  # Чистая функция
-    return 'Стив Джобс'
+    return 'А.Попов'
 
 
 if __name__ == '__main__':
