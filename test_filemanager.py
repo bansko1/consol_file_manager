@@ -23,8 +23,3 @@ def test_get_random_person():
 
 def test_get_file_info():
     assert get_file_info() == 'Стив Джобс'
-
-# def test_copy():
-#     os.mkdir('folder_mk')
-#     shutil.copy('folder_mk', 'folder_mk_new')
-#     assert 'folder_mk_new' in os.listdir()

@@ -1,6 +1,7 @@
 '''
 тесты для встроенных функций filter, map, sorted
 '''
+import math
 
 
 def test_filter():
@@ -15,4 +16,10 @@ def test_map():
 
 def test_sorted():
     assert sorted([5, 2, 7, 2, 1, 8]) == [1, 2, 2, 5, 7, 8]
-    assert sorted(['q','w','e','r','t','y']) == ['e', 'q', 'r', 't', 'w', 'y']
+    assert sorted(['q', 'w', 'e', 'r', 't', 'y']) == ['e', 'q', 'r', 't', 'w', 'y']
+
+
+def test_math():
+    assert round(math.pi, 5) - 3.14159 == 0
+    assert math.pow(3, 3) == 27
+    assert math.hypot(3, 4) == 5
