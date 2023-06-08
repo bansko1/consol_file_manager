@@ -8,11 +8,12 @@ import os
 def create_folder():
     user_path = input('Введите имя папки: ')
     # проверка на существование
-    if not os.path.exists(user_path):
-        # создать папку - передаем путь
-        os.mkdir(user_path)
-    else:
-        print(f'Папка с именем {user_path} уже существует')
+    # if not os.path.exists(user_path):
+    #     # создать папку - передаем путь
+    #     os.mkdir(user_path)
+    # else:
+    #     print(f'Папка с именем {user_path} уже существует')
+    os.mkdir(user_path) if not os.path.exists(user_path) else print(f'Папка с именем {user_path} уже существует')
 
 
 # Функция удаления папки или файла
@@ -21,10 +22,11 @@ def delete_folder_file():
     if os.path.isfile(user_path):
         os.remove(user_path)
     else:
-        if os.path.isdir(user_path):
-            os.removedirs(user_path)
-        else:
-            print(f'Папки или файла с именем {user_path} не существует')
+        # if os.path.isdir(user_path):
+        #     os.removedirs(user_path)
+        # else:
+        #     print(f'Папки или файла с именем {user_path} не существует')
+        os.removedirs(user_path) if os.path.isdir(user_path) else print(f'Папки или файла с именем {user_path} не существует')
 
 
 # Функция просмотра содержимого рабочей папки

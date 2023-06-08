@@ -58,11 +58,12 @@ while True:
         dirs = []
         files = []
         content = os.listdir()
-        for object in content:
-            if os.path.isfile(object):
-                files.append(object)
-            else:
-                dirs.append(object)
+        # for object in content:
+        #     if os.path.isfile(object):
+        #         files.append(object)
+        #     else:
+        #         dirs.append(object)
+        [files.append(object) if os.path.isfile(object) else dirs.append(object) for object in content ]
         with open('listdir.txt', 'w') as f:
             f.write(f'files: {files}\ndirs: {dirs}')
     elif choice == '8':
